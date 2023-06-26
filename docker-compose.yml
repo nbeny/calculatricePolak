@@ -34,9 +34,8 @@ services:
             - prototype_network
         depends_on: 
             - prototype_db
-        links:
-            - prototype_db
     prototype_db:
+        container_name: prototype_db
         image: postgres
         environment:
             - POSTGRES_USER=${POSTGRES_USER}
